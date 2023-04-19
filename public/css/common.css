@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'Organica';
+    src: url('Organica-Bold.woff2') format('woff2'),
+        url('Organica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Organica';
+    src: url('Organica-Medium.woff2') format('woff2'),
+        url('Organica-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Organica';
+    src: url('Organica-SemiBold.woff2') format('woff2'),
+        url('Organica-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Organica';
+    src: url('Organica-Regular.woff2') format('woff2'),
+        url('Organica-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.strikeout { 
+  position: relative;
+}
+.strikeout::after {
+  border-bottom: 2px solid #F00;
+  content: "";
+  left: 0;
+  margin-top: calc(0.120em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 54%;
+  transform:rotate(-10deg);
+  -webkit-  transform:rotate(-10deg);
+}
+.white{color:#fff;}
+/*===============================*/
+.show-479, .show-tab, .show-767, .show-400, .show-340, .show-359{display:none;}
+
+@media only screen and (max-width: 1020px){
+.show-tab{display:block;}
+.hide-tab{display:none;}
+}
+@media only screen and (max-width: 767px){
+.hide-767{display:none;}
+.show-767{display:block;}
+}
+@media only screen and (max-width: 479px){
+.show-479{display:block;}
+.hide-479{display:none;}
+}
+@media only screen and (max-width: 400px){
+.show-400{display:block;}
+.hide-400{display:none;}
+}
+@media only screen and (max-width: 340px){
+.show-359{display:block;}
+.hide-359{display:none;}
+}
+@media only screen and (max-width: 340px){
+.show-340{display:block;}
+.hide-340{display:none;}
+}
+

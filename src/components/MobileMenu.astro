@@ -2,6 +2,40 @@
 import "./menuitems.json";
 ---
 
+<style>
+  .mobilemenu {
+    top: 92px;
+  }
+  .mobilemenu {
+    left: 0;
+    position: fixed;
+    top: 110px;
+    background: rgba(255, 255, 255, 1);
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    display: none;
+  }
+  .mobilemenu li {
+    float: left;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+  }
+  .mobilemenu li a {
+    float: left;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+  }
+  .mobilemenu li a:hover {
+    color: #000;
+  }
+</style>
+
 <ul class="mobilemenu">
   <li><a href="javascript:bookmarkscroll.scrollTo('home')">Home</a></li>
   <li>
