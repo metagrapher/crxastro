@@ -1,0 +1,34 @@
+---
+export interface Props {
+  show?: boolean;
+  hide?: boolean;
+  at?: number;
+}
+
+const { at, at: when = '' } = Astro.props;
+const { show = '', hide = '' } = Astro.props;
+const sh = show||hide ? (show ? "show" : hide ? "hide" :''):'';
+const con = `${sh}${when && sh ? ` ${sh}-${when}` : ""}${at?` at-${at}`:when?` at-${when}`:''}`;
+
+---
+
+<style>
+  .hide,
+  .show,
+  .show-${at||when}
+  { display: none; visibility: hidden; }
+
+  .hide,
+  .hide-${at||when}
+  { display: block; visibility: visible; }
+
+  @media only screen and (max-width: ${at||when}px) {
+    .show,
+    .show-${at||when}
+    { display: block; visibility: visible; }
+
+    .hide,
+    .hide-${at||when} { display: none; visibility: hidden; }
+  }
+</style>
+<br class={con} />

@@ -1,0 +1,14 @@
+---
+import BreakMaybe from "../components/BreakMaybe.astro";
+
+const year = new Date().getFullYear();
+const { holder } = Astro.props;
+export interface Props {
+  holder: string;
+}
+---
+
+<style></style>
+<p class="ftrtxt3">
+  © Copyright {year}, {holder}<BreakMaybe show w="167" />All Rights Reserved.
+</p>

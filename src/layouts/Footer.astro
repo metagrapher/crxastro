@@ -1,0 +1,56 @@
+---
+import Container from "../components/Container.astro";
+import Disclaimer from "../components/Disclaimer.astro";
+import Copyright from "../components/Copyright.astro";
+---
+
+<style is:global>
+  footer {
+    background-color: #f0efee;
+    padding: 50px 0;
+  }
+  footer p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #313b54;
+    text-align: center;
+    padding: 0 50px;
+  }
+  footer p:nth-child(2) {
+    margin: 20px 0 0 0;
+  }
+  footer p:nth-child(3) {
+    margin: 30px 0 0 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    footer {
+      padding: 35px 0;
+    }
+    p {
+      padding: 0 0;
+    }
+  }
+</style>
+<footer class="flt">
+  <Container class="bdinpad">
+    <slot>
+      <Disclaimer class="ftrtxt1">
+        *These statements have not been evaluated by the FDA Food & Drug
+        Administration. These products are not intended to diagnose, treat, cure
+        or prevent any disease. The information provided by this website or this
+        company is not a substitute for a face-to-face consultation with your
+        physician and should not be construed as individual medical advice. The
+        testimonials on this website are individual cases and do not guarantee
+        that you will get the same results.
+      </Disclaimer>
+
+      <Disclaimer class="ftrtxt2">
+        All content, including text, graphics, images and information, contained
+        on or available through this web site is for general information
+        purposes only.
+      </Disclaimer>
+    </slot>
+    <Copyright holder="Fièra Cosmetics Inc. " />
+  </Container>
+</footer>

@@ -1,0 +1,25 @@
+---
+export interface Props {
+  color?: string;
+}
+const { color } = Astro.props;
+const hash_color = `#${color ?? "f00"}`;
+---
+
+<style define:vars={{ hash_color }}>
+  .strikeout {
+    position: relative;
+  }
+  .strikeout::after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid var(--hash_color, #f00);
+    left: 0;
+    margin-top: calc(0.12em / 2 * -1);
+    right: 0;
+    top: 54%;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+  }
+</style>
+<span class="strikeout"><slot /></span>

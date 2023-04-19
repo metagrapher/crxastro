@@ -1,0 +1,9 @@
+---
+export interface Props {
+  path?: string;
+  type?: string;
+}
+const { path = "/favicon.svg", type = "image/svg+xml" } = Astro.props;
+---
+
+<link rel="icon" type={type} href={path} />

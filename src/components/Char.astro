@@ -1,0 +1,8 @@
+---
+export interface Props {
+  cset?: string;
+}
+const { cset = "UTF-8" } = Astro.props;
+---
+
+<meta charset={cset} />

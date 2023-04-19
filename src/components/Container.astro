@@ -1,0 +1,27 @@
+---
+---
+
+<style>
+  .container {
+    width: 974px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @media only screen and (max-width: 1020px) {
+    .container {
+      max-width: 760px;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .container {
+      max-width: 640px;
+      width: 100%;
+    }
+  }
+</style>
+<div class="container">
+  <slot />
+</div>

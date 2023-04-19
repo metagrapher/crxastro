@@ -1,0 +1,47 @@
+---
+import Logo from "../components/Logo.astro";
+import MobileMenuButton from "../components/MobileMenuButton.astro";
+import MobileMenu from "../components/MobileMenu.astro";
+---
+
+<!------TOP-FIX-BAR------>
+<div class="header">
+  <div class="container">
+    <a href="/"><Logo /></a>
+
+    <div class="show-desk">
+      <ul class="topMenu scroller show-desk">
+        <li><a href="/">Home</a></li>
+        <li><a href="#expect"> What To Expect</a></li>
+        <li><a href="#ingredients">Key Ingredients</a></li>
+        <li><a href="#top">Top 5</a></li>
+      </ul>
+    </div>
+
+    <div class="show-tab show-mob">
+      <MobileMenuButton />
+      <MobileMenu />
+    </div>
+  </div>
+</div>
+<!------TOP-STRIP------>
+
+<div
+  class="topStrip"
+  style="
+    background: #d2d2d2!important;
+    float: left;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px!important;"
+>
+  <div class="container">
+    <p>
+      We independently select all products and services. If you click through
+      links we provide, we may earn a commission. <a
+        href="https://cosmeticsratings.com/advertising-disclosure"
+        target="_blank"><u>Learn more</u></a
+      >
+    </p>
+  </div>
+</div>

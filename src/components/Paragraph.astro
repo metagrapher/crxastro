@@ -1,0 +1,15 @@
+---
+export interface Props {
+  class?: string;
+  color?: string;
+}
+const { class: className = "", color: clr = "inherit" } = Astro.props;
+---
+
+<style define:vars={{ clr }}>
+  p {
+    color: var(--clr);
+    font-size: 1em;
+  }
+</style>
+<p class:list={[className, "text"]}><slot /></p>

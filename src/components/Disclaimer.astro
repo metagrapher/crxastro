@@ -1,0 +1,11 @@
+---
+import Paragraph from "../components/Paragraph.astro";
+export interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<Paragraph color="#c3c3c3" class:list={[className, "disclaimer"]}>
+  <slot />
+</Paragraph>

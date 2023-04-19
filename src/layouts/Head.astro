@@ -1,0 +1,19 @@
+---
+import FavIcon from "../components/FavIcon.astro";
+import Viewport from "../components/Viewport.astro";
+import Char from "../components/Char.astro";
+
+export interface Props {
+  title?: string;
+  norobots?: boolean;
+}
+const { norobots, title = "Title Head" } = Astro.props;
+---
+
+<head>
+  <Char cset="UTF-8" />
+  <Viewport />
+  <FavIcon />
+  <slot />
+  <title>{title}</title>
+</head>

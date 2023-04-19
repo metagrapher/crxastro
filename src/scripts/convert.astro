@@ -1,0 +1,11 @@
+---
+export interface Props {
+  src?: string;
+}
+const { src = "https://cdn-4.convertexperiments.com/js/10007438-10006779.js" } =
+  Astro.props;
+---
+
+<!-- Convert.com Script -->
+<script type="text/javascript" src={src}></script>
+<!-- End Convert.com -->

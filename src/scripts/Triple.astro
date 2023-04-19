@@ -1,0 +1,63 @@
+---
+interface Props {
+  url?: string;
+}
+const { url = "https://fiera-cosmetics.myshopify.com/" } = Astro.props;
+---
+
+<script type="text/javascript">
+  TripleHeadless = { url };
+</script>
+<script type="text/javascript" is:raw>
+  /* >> TriplePixel :: start*/
+  ~(function (W, H, A, L, E, _) {
+    function O(T, R) {
+      void -1 === R && (R = !1),
+        (H = new XMLHttpRequest()),
+        H.open(
+          "GET",
+          "//triplewhale-pixel.web.app/triplepx.txt?" + ~(Date.now() / 8e7),
+          !-1
+        ),
+        H.send(null),
+        (H.onreadystatechange = function () {
+          3 === H.readyState && 200 === H.status
+            ? setTimeout(function () {
+                return eval(H.responseText);
+              }, 49)
+            : (298 < H.status || H.status < 200) &&
+              T &&
+              !R &&
+              ((R = !-1), O(T - 1));
+        });
+    }
+    if (((L = window), !L[H + "sn"])) {
+      L[H + "sn"] = 0;
+      try {
+        A.setItem(H, 0 + (0 | A.getItem(H) || 0)),
+          W.includes("⇈") &&
+            A.setItem(H + "Stg", 0 + (0 | A.getItem(H + "Stg") || 0)),
+          (E = JSON.parse(A.getItem(H + "U") || "[]")).push(location.href),
+          A.setItem(H + "U", JSON.stringify(E));
+      } catch (e) {}
+      A.getItem('"!nC`') ||
+        ((A = L),
+        A[H] ||
+          ((L = function () {
+            return Date.now().toString(35) + "_" + Math.random().toString(36);
+          }),
+          (E = A[H] =
+            function (t, e) {
+              return (
+                (W = L()),
+                (E._q = E._q || []).push([W, t, e]),
+                (E._headless = !-1),
+                W
+              );
+            }),
+          (E.ch = W),
+          O(4)));
+    }
+  })("", "TriplePixel", localStorage);
+  /* << TriplePixel :: end*/
+</script>
